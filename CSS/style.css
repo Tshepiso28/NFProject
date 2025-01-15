@@ -200,6 +200,11 @@ outline: transparent;
     font-weight: bold;
 }
 
+.user-post img{
+    width: 150px;
+    height: 100px;
+}
+
 
 /* #########Timeline Post ######### */
 .time-line{
@@ -244,6 +249,7 @@ outline: transparent;
 }
 .user-post{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-top: 1px solid #548B54;
