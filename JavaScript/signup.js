@@ -72,7 +72,7 @@ form.addEventListener('submit', (e) => {
         localStorage.setItem('userData', JSON.stringify(userData));
 
         alert('Sign-up successful! Your account has been created.');
-        window.location.href = '../index.html'; 
+        window.location.href = '../HTML/signup.html'; 
     }
 });
 
