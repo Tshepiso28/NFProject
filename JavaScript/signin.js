@@ -1,27 +1,56 @@
-function validateSignInForm(event) {
-    event.preventDefault();
+const signinForm = document.getElementById('signinForm');
+const signinUsername = document.getElementById('txtUserName');
+const signinPassword = document.getElementById('txtPass');
 
-    const usernameOrEmail = document.getElementById("txtUserName").value.trim();
-    const password = document.getElementById("txtPass").value;
+const signinUsernameError = document.getElementById('usernameError');
+const signinPasswordError = document.getElementById('passwordError');
 
-    // Retrieve user details from localStorage
-    const storedUsername = localStorage.getItem("username");
-    const storedEmail = localStorage.getItem("email");
-    const storedPassword = localStorage.getItem("password");
+signinForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    let isValid = true;
 
-    if (!usernameOrEmail || !password) {
-        alert("All fields are required.");
-        return false;
-    }
+    const userData = JSON.parse(localStorage.getItem('userData')) || {};
 
-    // Check if username/email and password match the stored values
-    if (
-        (usernameOrEmail === storedUsername || usernameOrEmail === storedEmail) &&
-        password === storedPassword
-    ) {
-        alert("Sign-in successful!");
-        window.location.href = "/HTML/notFacebook.html"; // Redirect to the main page
+
+    if (signinUsername.value.trim() === '') {
+        signinUsernameError.textContent = 'Username is required.';
+        isValid = false;
+    } else if (signinUsername.value.trim() !== userData.username) {
+        signinUsernameError.textContent = 'Username not found.';
+        isValid = false;
     } else {
-        alert("Invalid username/email or password.");
+        signinUsernameError.textContent = '';
     }
-}
+
+
+    if (signinPassword.value.trim() === '') {
+        signinPasswordError.textContent = 'Password is required.';
+        isValid = false;
+    } else if (signinPassword.value.trim() !== userData.password) {
+        signinPasswordError.textContent = 'Incorrect password.';
+        isValid = false;
+    } else {
+        signinPasswordError.textContent = '';
+    }
+
+    if (isValid) {
+        alert('Sign-in successful!');
+        sessionStorage.setItem('isLoggedIn', true);
+        window.location.href = '/HTML/notFacebook.html';
+    }
+});
+
+const toggleVisibility = (input, button) => {
+    button.addEventListener('click', () => {
+        if (input.type === 'password') {
+            input.type = 'text';
+            button.textContent = 'Hide';
+        } else {
+            input.type = 'password';
+            button.textContent = 'Show';
+        }
+    });
+};
+
+toggleVisibility(signinPassword, document.getElementById('togglePass'));
