@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ########## External Icons ############ */
+.fa-solid, .fa-brands{
+    cursor: pointer;
+    color: #548B54;
+}
+.fa-plus{
+    color: black;
+}
+.fa-ellipsis-vertical:hover{
+    font-weight: bolder;
+    font-size: 20px;
+}
+/* ###################################################### */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* ################ NavBar ############### */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #548B54;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.mobile-nav{
+    display: none;
+}
+
+.nav-options {
+    display: flex;
+    align-items: center;
+}
+
+.nav-options a {
+    text-decoration: none;
+    color: black;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    padding-left: 10px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid green;
+    transform: border-bottom 0.9s;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile img {
+    cursor: pointer;
+    border-radius: 50%;
+    padding-right: 10px;
+  
+}
+
+.user-profile label {
+    cursor: pointer;
+    font-size: 15px;
+}
+/* ############################## */
+.msg-main{
+    margin-top: 1px;
+    background-color: red;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.msg-head{
+    background-color: #548B54;
+    margin: 0px 2px 0px 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: static;
+}
+.msg-head img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.msg-head .msg-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-foot{
+    background-color: white;
+    margin: 0px 2px 2px 2px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.msg-foot textarea{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    margin-left: 2px;
+    border: 1px solid #548B54;
+    border-radius: 10px;
+    padding: 2px;
+}
+.msg-foot button{
+    cursor: pointer;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #548B54;
+    border-radius: 50%;
+    margin-right: 2px;
+    text-align: center;
+    font-size: 20px;
+    position: static;
+}
+.msg-foot button:hover{
+    background-color: #548B54;
+}
+.msg-foot .fa-solid:hover{
+    cursor: pointer;
+    color: white;
+}
+.msg-body{
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    max-height: 500px;
+    display: flex;
+    overflow-y: auto;
+    white-space: nowrap;
+    gap: 10px;
+}
+
+.user1{
+    background-color: blue;
+    width: 100%;
+    height: 100px;
+}
+.user2{
+    background-color: slateblue;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
+
+
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .desktop-nav{
+        display: none;
+    }
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+    }
+
+    .nav-options {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-options img {
+        width: 50px;
+        height: 50px;
+        padding-right: 10px;
+        padding-top: 20px;
+
+    }
+    .fa-solid{
+        font-size: 30px;
+        letter-spacing: 20px;
+    }
+    .fa-solid:hover{
+        color: black;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    li {
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+    }
+    li:hover {
+        cursor: pointer;
+        border-bottom: none;
+    }
+
+    .user-profile {
+        margin-top: 10px;
+        align-items: center;
+        display: block;
+    }
+
+    .user-profile img {
+        display: none;
+        width: 35px;
+        height: 35px;
+    }
+
+    .user-profile label {
+        font-size: 14px;
+    }
+    .writePost{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+    
+    }
+    .writePost img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 50px;
+    }
+    .writePost input{
+        width: 100%;
+        margin-right: 50px;
+        border: none;
+        border-bottom: 1px solid #548B54;
+        font-size: 15px;
+
+    }
+    .msg-main{
+        margin-top: 1px;
+        background-color: red;
+        width: 380px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .msg-body{
+        background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        margin: 2px;
+        max-height: 440px;
+        display: flex;
+        overflow-y: auto;
+        white-space: nowrap;
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+
+    .nav-options img {
+        width: 40px;
+        height: 40px;
+    }
+
+    ul {
+        gap: 8px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    .user-profile img {
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+    .user-profile label {
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+    .writePost{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+    
+    }
+    .writePost img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 50px;
+    }
+    .writePost input{
+        width: 100%;
+        margin-right: 50px;
+        border: none;
+        border-bottom: 1px solid #548B54;
+        font-size: 12px;
+
+    }
+}
+

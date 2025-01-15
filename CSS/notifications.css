@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+}
+/* ########## External Icons ############ */
+.fa-solid, .fa-brands{
+    cursor: pointer;
+    color: #548B54;
+}
+.fa-plus{
+    color: black;
+}
+.fa-ellipsis-vertical:hover{
+    font-weight: bolder;
+    font-size: 20px;
+}
+/* ###################################################### */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ################ NavBar ############### */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #548B54;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.mobile-nav{
+    display: none;
+}
+.nav-options {
+    display: flex;
+    align-items: center;
+}
+
+.nav-options a {
+    text-decoration: none;
+    color: black;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    padding-left: 10px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid green;
+    transform: border-bottom 0.9s;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile img {
+    cursor: pointer;
+    border-radius: 50%;
+    padding-right: 10px;
+  
+}
+
+.user-profile label {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .desktop-nav{
+        display: none;
+    }
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+    }
+
+    .nav-options {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-options img {
+        width: 50px;
+        height: 50px;
+        padding-right: 10px;
+        padding-top: 20px;
+
+    }
+    .fa-solid{
+        font-size: 30px;
+        letter-spacing: 20px;
+    }
+    .fa-solid:hover{
+        color: black;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    li {
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+    }
+    li:hover {
+        cursor: pointer;
+        border-bottom: none;
+    }
+
+    .user-profile {
+        margin-top: 10px;
+        align-items: center;
+        display: block;
+    }
+
+    .user-profile img {
+        display: none;
+        width: 35px;
+        height: 35px;
+    }
+
+    .user-profile label {
+        font-size: 14px;
+    }
+    .writePost{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+    
+    }
+    .writePost img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 50px;
+    }
+    .writePost input{
+        width: 100%;
+        margin-right: 50px;
+        border: none;
+        border-bottom: 1px solid #548B54;
+        font-size: 15px;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+
+    .nav-options img {
+        width: 40px;
+        height: 40px;
+    }
+
+    ul {
+        gap: 8px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    .user-profile img {
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+    .user-profile label {
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+    .writePost{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+    
+    }
+    .writePost img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 50px;
+    }
+    .writePost input{
+        width: 100%;
+        margin-right: 50px;
+        border: none;
+        border-bottom: 1px solid #548B54;
+        font-size: 12px;
+
+    }
+}
+
