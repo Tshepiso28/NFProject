@@ -27,7 +27,6 @@ form.addEventListener('submit', (e) => {
         usernameError.textContent = '';
     }
 
-    // Validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.value.trim())) {
         emailError.textContent = 'Enter a valid email.';
