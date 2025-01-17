@@ -25,6 +25,12 @@ postButton.addEventListener('click', () => {
         alert('Please write something or upload an image!');
         return;
     }
+    const loggedInUser = sessionStorage.getItem('loggedInUser');
+
+    if (!loggedInUser) {
+        alert('User not logged in. Please sign in first.');
+        return;
+    }
 
 
     const postDiv = document.createElement('div');
@@ -33,8 +39,8 @@ postButton.addEventListener('click', () => {
     postDiv.innerHTML = `
         <div class="user-line">
             <div class="post-info">
-                <img src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg" alt="">
-                <h4>Donald</h4>
+
+                <h4>${loggedInUser}</h4>
             </div>
             <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>

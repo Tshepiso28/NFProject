@@ -37,6 +37,7 @@ signinForm.addEventListener('submit', (e) => {
     if (isValid) {
         alert('Sign-in successful!');
         sessionStorage.setItem('isLoggedIn', true);
+        sessionStorage.setItem('loggedInUser', userData.username);
         window.location.href = '/HTML/notFacebook.html';
     }
 });
