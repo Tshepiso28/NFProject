@@ -103,6 +103,7 @@ li:hover {
 .writePost textarea{
     width: 100%;
     margin-right: 50px;
+    margin-left: 50px;
     border: none;
     border-bottom: 1px solid #548B54;
     font-size: 25px;
@@ -167,7 +168,6 @@ outline: transparent;
     white-space: nowrap;
     gap: 10px;
     padding-top: 10px;
-    /* background-color: red; */
 }
 .profile-slide::-webkit-scrollbar{
     width: 0;
@@ -211,7 +211,6 @@ outline: transparent;
     display: flex;
     flex-direction: column;
     border: 2px solid #548B54;
-    /* gap: 10px; */
     margin: 0px 10px 0px 10px;
 }
 .user-line{
@@ -376,6 +375,17 @@ footer img{
         border-bottom: 1px solid #548B54;
         font-size: 15px;
 
+    }
+    .writePost textarea{
+        width: 100%;
+        margin-right: 25px;
+        margin-left: 25px;
+        border: none;
+        border-bottom: 1px solid #548B54;
+        font-size: 25px;
+    }
+    .writePost textarea:focus{
+    outline: transparent;
     }
 }
 

@@ -32,6 +32,13 @@ postButton.addEventListener('click', () => {
         return;
     }
 
+    const label = document.createElement('label');
+    label.setAttribute('for', 'username');
+    label.textContent = `${loggedInUser}`;
+
+    const userProfileDiv = document.querySelector('.user-profile');
+    userProfileDiv.appendChild(label);
+
 
     const postDiv = document.createElement('div');
     postDiv.classList.add('time-line');
